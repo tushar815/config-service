@@ -10,6 +10,8 @@ spring:
           timeout: 5
           clone-on-start: true
           force-pull: true
+  lifecycle:
+    timeout-per-shutdown-phase: 15s
 
 server:
   port: 8888
@@ -19,4 +21,4 @@ server:
       min-spare: 5
     connection-timeout: 2s
     keep-alive-timeout: 15s
-
+  shutdown: graceful
